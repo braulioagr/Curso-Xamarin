@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ColorSwitcher"
+             x:Class="ColorSwitcher.MainPage">
+
+	<StackLayout>
+         <BoxView x:Name="boxColor"
+                      BackgroundColor="Black"
+                      HeightRequest="300"/>
+         <Label Margin="25,30,0,0"
+                       Text="Red"/>
+        <Slider x:Name="redSlider"
+                    Margin="15,0,0,0"
+                    ValueChanged="ChangeColor"/>
+         <Label Margin="25,30,0,0"
+                       Text="Green"/>
+        <Slider x:Name="greenSlider"
+                    Margin="15,0,0,0"
+                    ValueChanged="ChangeColor"/>
+        <Label Margin="25,30,0,0"
+                      Text="Blue"/>
+        <Slider x:Name="blueSlider"
+                    Margin="15,0,0,0"
+                    ValueChanged="ChangeColor"/>
+        <Label Text="Valor Hexadecimal: "
+                      x:Name="lblDisplay"/>
+    </StackLayout>
+
+</ContentPage>

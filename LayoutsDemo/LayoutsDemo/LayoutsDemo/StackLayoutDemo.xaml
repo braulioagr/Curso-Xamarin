@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutsDemo.StackLayoutDemo">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="red"
+                     Spacing="10">
+            <!--Label: Nombre del control
+                Text="Welcome to Xamarin.Forms!":  Texto de la etiqueta
+                BackgroundColor="AliceBlue": Color de fondo
+                VerticalOptions="FillAndExpand": Opciones de alineacion vertical
+                HorizontalOptions="CenterAndExpand": Opciones de alineacion horizontal-->
+            <Label
+                Text="Welcome to Xamarin.Forms!"
+                BackgroundColor="AliceBlue"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand"/>
+            <Label
+                Text="Welcome to Xamarin.Forms!"
+                BackgroundColor="DarkBlue"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="End"/>
+            <Label
+                Text="Welcome to Xamarin.Forms!"
+                BackgroundColor="DarkGray"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"/>
+            <Label
+                Text="Welcome to Xamarin.Forms!"
+                BackgroundColor="DarkGoldenrod"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Label
+                Text="Welcome to Xamarin.Forms!"
+                BackgroundColor="DarkSeaGreen"
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TipCalculator.Converters"
+             x:Class="TipCalculator.MainPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DecimalToMoney x:Key="toMoney"></converters:DecimalToMoney>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+	 <TableView Intent="Form">
+          <TableSection Title="Datos">
+
+            <EntryCell x:Name="txtTotal"
+                         Label="Total"
+                         Placeholder="$0.0"
+                         Text="{Binding tipModel.Total}"/>
+            <EntryCell x:Name="txtPropina"
+                         Label="Propina (%)"
+                         Text="{Binding tipModel.Propina}"/>
+            <EntryCell x:Name="txtNoPersonas"
+                         Label="# de personas"
+                         Text="{Binding tipModel.NoPersonas}"/>
+          </TableSection>
+        <TableSection>
+            <ViewCell>
+                <ViewCell.View>
+                    <StackLayout>
+                        <Button x:Name="btnCalcular"
+                                  Text="¡Calcular!"
+                                  Command="{Binding OperationsCommand}"></Button>
+                    </StackLayout>
+                </ViewCell.View>
+            </ViewCell>
+        </TableSection>
+          <TableSection Title="Resultado">
+              
+              
+              <TextCell x:Name="lblPropina"
+                        Text="Propina: "
+                        Detail="{Binding tipModel.TotalPropina, Converter={StaticResource toMoney}}"/>
+              
+              
+              <TextCell x:Name="lblTotal"
+                        Text="Total: "
+                        Detail="{Binding tipModel.TotalConPropina, Converter={StaticResource toMoney}}"/>
+              <TextCell x:Name="lblPropinaPorPersona"
+                        Text="Propina por persona: "
+                        Detail="{Binding tipModel.PropinaPorPersona, Converter={StaticResource toMoney}}"/>
+              <TextCell x:Name="lblTotalPorPersona"
+                        Text="Total por persona: "
+                        Detail="{Binding tipModel.TotalPorPersona, Converter={StaticResource toMoney}}"/>
+          </TableSection>
+    </TableView>
+
+</ContentPage>

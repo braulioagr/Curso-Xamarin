@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DependencyServiceDemo"
+             x:Class="DependencyServiceDemo.MainPage">
+
+	<StackLayout>
+        <Button HeightRequest="100"
+                Text="Get me a Message!"
+                Clicked="Button_OnClicked"></Button>
+	    <Button HeightRequest="100"
+	            Text="Text To Speech!"
+	            Clicked="TextToSpeech_OnClicked"></Button>
+    </StackLayout>
+
+</ContentPage>
